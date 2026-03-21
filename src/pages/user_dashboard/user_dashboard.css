@@ -1,0 +1,446 @@
+/* ===== Dashboard-specific styles ===== */
+
+.loading-state,
+.error-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-base);
+    min-height: 50vh;
+    color: var(--color-text-muted);
+}
+
+.loading-spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid var(--color-border);
+    border-top-color: var(--color-accent);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.error-state {
+    color: var(--color-danger);
+}
+
+/* Page header controls */
+.page-header__controls {
+    display: flex;
+    align-items: center;
+    gap: var(--space-base);
+}
+
+/* Household section */
+.household-card-spacing {
+    margin-bottom: var(--space-base);
+}
+
+.household-create,
+.household-leave {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-base);
+}
+
+.household-form {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.household-input {
+    flex: 1;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-input);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-primary);
+    padding: var(--space-sm) var(--space-base);
+    font-family: var(--font-family);
+}
+
+.household-btn {
+    border: none;
+    border-radius: var(--radius-sm);
+    background: var(--color-accent);
+    color: white;
+    font-weight: 600;
+    padding: var(--space-sm) var(--space-base);
+    cursor: pointer;
+}
+
+.household-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.household-btn--danger {
+    background: var(--color-danger);
+}
+
+.household-members-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.household-member-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-sm) var(--space-base);
+    gap: var(--space-base);
+}
+
+.household-member-row__info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.household-member-row__info span {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+}
+
+.household-member-row__badge {
+    color: var(--color-warning) !important;
+    font-weight: 600;
+}
+
+.household-feedback {
+    margin-bottom: var(--space-base);
+    border-radius: var(--radius-sm);
+    padding: var(--space-sm) var(--space-base);
+}
+
+.household-feedback--success {
+    border: 1px solid var(--color-success);
+    background: color-mix(in srgb, var(--color-success) 14%, transparent);
+    color: var(--color-success);
+}
+
+/* Excluded keywords */
+.keyword-card {
+    margin-bottom: var(--space-xl);
+}
+
+.keyword-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-base);
+}
+
+.keyword-card__hint {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.keyword-form {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.keyword-input {
+    flex: 1;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-input);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-primary);
+    padding: var(--space-sm) var(--space-base);
+    font-family: var(--font-family);
+}
+
+.keyword-btn {
+    border: none;
+    border-radius: var(--radius-sm);
+    background: var(--color-accent);
+    color: #fff;
+    font-weight: 600;
+    padding: var(--space-sm) var(--space-base);
+    cursor: pointer;
+}
+
+.keyword-btn--danger {
+    background: var(--color-danger);
+}
+
+.keyword-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.keyword-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.keyword-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-sm) var(--space-base);
+    gap: var(--space-base);
+}
+
+.keyword-empty {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+}
+
+/* Charts */
+.chart-empty {
+    text-align: center;
+    color: var(--color-text-muted);
+    padding: var(--space-2xl);
+    font-size: var(--font-size-sm);
+}
+
+.card__body--center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__count {
+    background: var(--color-accent-soft);
+    color: var(--color-accent);
+    padding: 2px 10px;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+}
+
+/* Pie chart legend */
+.pie-legend {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    width: 100%;
+    margin-top: var(--space-base);
+}
+
+.pie-legend__item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--font-size-sm);
+}
+
+.pie-legend__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.pie-legend__label {
+    flex: 1;
+    color: var(--color-text-secondary);
+    text-transform: capitalize;
+}
+
+.pie-legend__value {
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+/* Recharts overrides — fix label colors for dark theme */
+.recharts-default-tooltip {
+    border-radius: var(--radius-sm) !important;
+}
+
+.recharts-pie-label-text {
+    fill: #e4e4e7 !important;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.recharts-pie-label-line {
+    stroke: #52525b !important;
+}
+
+/* Chart view toggle (expenses / income) */
+.chart-view-toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    background: var(--color-surface);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    white-space: nowrap;
+}
+
+.chart-view-toggle:hover {
+    border-color: var(--color-accent);
+    color: var(--color-text-primary);
+}
+
+/* Custom pie tooltip — fully white on dark */
+.custom-tooltip {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 12px;
+    background: #18181b;
+    border: 1px solid #2a2a2e;
+    border-radius: 8px;
+}
+
+.custom-tooltip__label {
+    color: #fafafa;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.custom-tooltip__value {
+    color: #d4d4d8;
+    font-size: 12px;
+}
+
+/* Edit expense modal */
+.edit-expense-modal__overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1200;
+    padding: var(--space-base);
+}
+
+.edit-expense-modal {
+    width: 100%;
+    max-width: 680px;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+}
+
+.edit-expense-modal__header {
+    padding: var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.edit-expense-modal__title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+}
+
+.edit-expense-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-base);
+    padding: var(--space-lg);
+}
+
+.edit-expense-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-base);
+}
+
+.edit-expense-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.edit-expense-form__group label {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.edit-expense-form__input {
+    width: 100%;
+    padding: var(--space-md) var(--space-base);
+    background: var(--color-bg-input);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-base);
+    font-family: var(--font-family);
+    outline: none;
+}
+
+.edit-expense-form__input:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent-soft);
+}
+
+.edit-expense-form__textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.edit-expense-form__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-sm);
+}
+
+.edit-expense-form__btn {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-sm) var(--space-base);
+    font-family: var(--font-family);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.edit-expense-form__btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.edit-expense-form__btn--ghost {
+    background: transparent;
+    color: var(--color-text-secondary);
+}
+
+.edit-expense-form__btn--primary {
+    background: var(--color-accent);
+    color: #fff;
+    border-color: var(--color-accent);
+}
+
+@media (max-width: 800px) {
+    .household-form {
+        flex-direction: column;
+    }
+
+    .keyword-form {
+        flex-direction: column;
+    }
+
+    .household-member-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .keyword-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .edit-expense-form__row {
+        grid-template-columns: 1fr;
+    }
+}
